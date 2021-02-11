@@ -99,8 +99,8 @@ const HomeBanner = ({ onCursor }) => {
         />
       </Video>
       <Canvas
-        height="100%"
-        width="100%"
+        height= {typeof window !== `undefined` ? size.height : null} 
+        width= {typeof window !== `undefined` ? size.width : null} 
         ref={canvas}
         onMouseEnter={() => onCursor("hovered")}
         onMouseLeave={onCursor}
