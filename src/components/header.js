@@ -19,7 +19,7 @@ const Header = ({
   toggleMenu,
 }) => {
   const dispatch = useGlobalDispatchContext()
-  const { currentTheme } = useGlobalStateContext()
+  const currentTheme = useGlobalStateContext()
   const hamburger = useRef(null)
   const position = useElementPosition(hamburger)
 

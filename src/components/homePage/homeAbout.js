@@ -141,7 +141,7 @@ const HomeAbout = ({ onCursor }) => {
 const Accordion = ({ details, expanded, setExpanded, onCursor }) => {
   const isOpen = details.id === expanded
   const [hovered, setHovered] = useState(false)
-  const { currentTheme } = useGlobalStateContext()
+  const currentTheme = useGlobalStateContext()
   return (
     <>
       <AccordionHeader

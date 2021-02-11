@@ -14,7 +14,7 @@ import {
 
 const HomeBanner = ({ onCursor }) => {
   const size = useWindowSize()
-  const { currentTheme } = useGlobalStateContext()
+  const currentTheme = useGlobalStateContext()
   let canvas = useRef(null)
   useEffect(() => {
     let renderingElement = canvas.current
@@ -99,8 +99,8 @@ const HomeBanner = ({ onCursor }) => {
         />
       </Video>
       <Canvas
-        height={size.height}
-        width={size.width}
+        height="100%"
+        width="100%"
         ref={canvas}
         onMouseEnter={() => onCursor("hovered")}
         onMouseLeave={onCursor}
